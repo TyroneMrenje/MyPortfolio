@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import '@fontsource-variable/jetbrains-mono/wght.css';
+@import '@fontsource-variable/cormorant-garamond/wght.css';
+@import '@fontsource-variable/geist-mono/wght.css';
+
+
+
+body {
+  font-family: 'Geist Mono Variable', monospace;
+  
+}
+
+span {
+  font-family: 'JetBrains Mono Variable', monospace;
+}
+
+h1,
+h2 {
+
+  font-family: 'Cormorant Garamond Variable', serif;
+
+}
+
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  display: inline-flex;
+  border-radius: 4px;
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+}
