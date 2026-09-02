@@ -1,4 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { Projects } from "../components/projects";
 
 export default function Home() {
 
@@ -51,7 +53,7 @@ export default function Home() {
 
                  <div className="flex flex-col gap-2 space-y-3 mt-20">
                         <span className="text-[#ff6a00]">About</span>
-                        <span className="text-3xl">All About The Developer</span>
+                        <span className="text-3xl font-bold">All About The Developer</span>
                         <p className="text-sm">Code, infrastructure, networks. One engineer tying it together.</p>
                 </div>
                 <section className="flex flex-row items-center justify-between gap-3 mt-10">                 
@@ -85,7 +87,7 @@ export default function Home() {
                         </p>
                        
                         <div className="flex flex-row items-center justify-between border-t border-gray-700 gap-2 p-2  mt-5">
-                            <span className="text-sm">2025 - Present</span>
+                            <span className="text-sm">2026 - Present</span>
                             <div className="flex flex-col gap-2">
                                 <span className="text-sm">Software Engineer</span>
                                 <span className="text-sm">Fiverr</span>                           
@@ -93,15 +95,15 @@ export default function Home() {
                             <span className="text-sm">Freelance</span>
                         </div>    
                         <div className="flex flex-row items-center justify-between border-t border-gray-700 gap-2 p-2">
-                            <span className="text-sm">2025 - Present</span>
+                            <span className="text-sm">Nov 2025 - Jan 2026</span>
                             <div className="flex flex-col gap-2">
                                 <span className="text-sm">Software Engineer</span>
                                 <span className="text-sm">Forage</span>
                             </div>
-                            <span className="text-sm">Apprentice</span>
+                            <span className="text-sm">Apprenticeship</span>
                         </div> 
-                         <div className="flex flex-row items-center justify-between border-y border-gray-700 gap-2 p-2">
-                            <span className="text-sm">2025 - Present</span>
+                         <div className="flex flex-row items-center justify-between border-t border-gray-700 gap-2 p-2">
+                            <span className="text-sm">May 2024 - Aug 2024</span>
                             <div className="flex flex-col gap-2">
                                 <span className="text-sm">IT Intern</span>
                                 <span className="text-sm">Swahilipot Hub Foundation</span>
@@ -110,87 +112,38 @@ export default function Home() {
                         </div>              
                     </div>
                 </section>
-                 <div className="flex flex-col gap-2">
+
+                 <div className="flex flex-col gap-2 space-y-3 mt-20">
                     <span className="text-[#ff6a00]">Work</span>
-                    <span></span>
-                    <span></span>
+                    <span className="text-3xl font-bold">Selected Systems.</span>
+                    <p className="text-sm">Showcase of some of my projects. End to end</p>
                 </div>
-                <section className="grid relative grid-rows-3 gap-2">
-                    <div className="flex justify-between w-full border-y border-gray-700">
-                        <div className="flex flex-col p-2 gap-3 w-full">
-                            <h2>Amimo Spices</h2>
-                            <p className="text-xs">[E-Commerce Store]</p>
-                            <p className="w-[50%] text-pretty text-sm">Online e-commerce store with search capabilities. Whatsapp Ordering Configured</p>
-                            <div className="flex flex-row gap-2">
-                                <div className="text-xs border border-gray-700 rounded-md p-2">React</div>
-                                <div className="text-xs border border-gray-700 rounded-md p-2">Laravel</div>
-                                <div className="text-xs border border-gray-700 rounded-md p-2">PostgreSQL</div>
+                <section className="grid relative grid-rows-4 gap-2 mt-10">               
+                    { Projects.map((project, index) => (
+                        <div className="flex flex-row p-4">
+                            <div key={index} className="flex flex-col justify-between border-y border-gray-700 p-2 gap-3">
+                                <h2 className="text-2xl text-[#ff6a00] font-bold">{project.title}</h2>
+                                <p className="text-xs text-green-300">[{project.type}]</p>
+                                <p className="w-[50%] text-pretty text-sm">{project.description}</p>
+                                <div className="flex flex-row gap-2">
+                                    {project.languages.map((language,index)=> (
+                                        <div key={index} className="text-xs border border-gray-700 rounded-md p-2">{language}</div>
+                                    ))}
+                                </div>
+                            </div>             
+                                <button className="flex relative p-2 right-15">
+                                    <FaArrowUpRightFromSquare  className="h-5 w-5"/>
+                                </button>
                             </div>
-                       </div>
-                       <div>
-                         <button className="h-7 w-7">
-                            <span>Link</span>
-                        </button>
-                       </div>
-                    </div>
-                    <div className="flex justify-between w-full border-b border-gray-700">
-                        <div className="flex flex-col p-2 gap-3 w-full">
-                            <h2>Amimo Spices</h2>
-                            <p className="text-xs">[E-Commerce Store]</p>
-                            <p className="w-[50%] text-pretty text-sm">Online e-commerce store with search capabilities. Whatsapp Ordering Configured</p>
-                            <div className="flex flex-row gap-2">
-                                <div className="text-xs border border-gray-700 rounded-md p-2">React</div>
-                                <div className="text-xs border border-gray-700 rounded-md p-2">Laravel</div>
-                                <div className="text-xs border border-gray-700 rounded-md p-2">PostgreSQL</div>
-                            </div>
-                        </div>
-                       <div>
-                         <button className="h-7 w-7">
-                            <span>Link</span>
-                        </button>
-                       </div>
-                    </div>
-                    <div className="flex justify-between w-full border-b border-gray-700">
-                        <div className="flex flex-col p-2 gap-3 w-full">
-                            <h2>Amimo Spices</h2>
-                            <p className="text-xs">[E-Commerce Store]</p>
-                            <p className="w-[50%] text-pretty text-sm">Online e-commerce store with search capabilities. Whatsapp Ordering Configured</p>
-                            <div className="flex flex-row gap-2">
-                                <div className="text-xs border border-gray-700 rounded-md p-2">React</div>
-                                <div className="text-xs border border-gray-700 rounded-md p-2">Laravel</div>
-                                <div className="text-xs border border-gray-700 rounded-md p-2">PostgreSQL</div>
-                            </div>
-                        </div>
-                       <div>
-                         <button className="h-7 w-7">
-                            <span>Link</span>
-                        </button>
-                       </div>
-                    </div>
-                      <div className="flex justify-between w-full border-b border-gray-700 ">
-                        <div className="flex flex-col p-2 gap-3 w-full">
-                            <h2>Amimo Spices</h2>
-                            <p className="text-xs">[E-Commerce Store]</p>
-                            <p className="w-[50%] text-pretty text-sm">Online e-commerce store with search capabilities. Whatsapp Ordering Configured</p>
-                            <div className="flex flex-row gap-2">
-                                <div className="text-xs border border-gray-700 rounded-md p-2">React</div>
-                                <div className="text-xs border border-gray-700 rounded-md p-2">Laravel</div>
-                                <div className="text-xs border border-gray-700 rounded-md p-2">PostgreSQL</div>
-                            </div>
-                        </div>
-                       <div>
-                         <button className="h-7 w-7">
-                            <span>Link</span>
-                        </button>
-                       </div>
-                    </div>                
+                        
+                    ))}                   
                 </section>
 
-                <section className="flex flex-col">
-                    <div className="flex flex-col gap-2">
-                        <span>Skills</span>
-                        <span></span>
-                        <span></span>
+                <section className="flex flex-col mt-10">
+                    <div className="flex flex-col gap-2 space-y-3">
+                        <span className="text-[#ff6a00]">Skills</span>
+                        <span className="text-3xl font-bold">Skills that pay the Bills</span>
+                        <p>What I</p>
                     </div>
                     <div className="grid grid-cols-3 ">
 
