@@ -1,6 +1,7 @@
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { Projects } from "../components/projects";
+import { FaArrowRight,FaGithub } from "react-icons/fa";
+import { FaArrowUpRightFromSquare, FaLinkedin ,FaLetterboxd } from "react-icons/fa6";
+import { MdOutlineEmail } from "react-icons/md";
+import { Projects, Frontend, Backend, Database, Tools } from "../components/projects";
 
 export default function Home() {
 
@@ -30,7 +31,7 @@ export default function Home() {
 
             </nav>
             <main className="flex relative flex-col px-30 ">
-                <section className="flex flex-col justify-center mt-10 p-4 rounded-md gap-2">
+                <section className="flex flex-col justify-center bg-[#1f2432]  mt-10 p-8 rounded-lg gap-2 border border-gray-600">
                     <div className="flex flex-row items-center justify-center gap-2 border border-gray-800 bg-teal-950 p-1 w-50 rounded-md">
                         <span className=" relative  h-[5px] w-[5px] animate-ping rounded-full bg-green-300 opacity-80"></span>
                         <span className=" text-sm font-thin text-green-300"> AVAILABLE FOR WORK</span>
@@ -125,7 +126,7 @@ export default function Home() {
                                 <h2 className="text-2xl text-[#ff6a00] font-bold">{project.title}</h2>
                                 <p className="text-xs text-green-300">[{project.type}]</p>
                                 <p className="w-[50%] text-pretty text-sm">{project.description}</p>
-                                <div className="flex flex-row gap-2">
+                                <div className="flex flex-row gap-2 mb-4">
                                     {project.languages.map((language,index)=> (
                                         <div key={index} className="text-xs border border-gray-700 rounded-md p-2">{language}</div>
                                     ))}
@@ -134,7 +135,7 @@ export default function Home() {
                                 <button className="flex relative p-2 right-15">
                                     <FaArrowUpRightFromSquare  className="h-5 w-5"/>
                                 </button>
-                            </div>
+                        </div>
                         
                     ))}                   
                 </section>
@@ -143,12 +144,80 @@ export default function Home() {
                     <div className="flex flex-col gap-2 space-y-3">
                         <span className="text-[#ff6a00]">Skills</span>
                         <span className="text-3xl font-bold">Skills that pay the Bills</span>
-                        <p>What I</p>
-                    </div>
-                    <div className="grid grid-cols-3 ">
+                        <p className="text-sm">Skills and languages I've picked up and used along the way</p>
+                    </div>                 
+                       <div className="grid grid-cols-4 justify-center gap-2 bg-[#1f2432] border border-gray-600  mt-10 p-6 rounded-md">
+                         {Frontend.map((frontend)=>(
+                            <div className="flex flex-col items-center gap-3 text-sm p-2">
+                                <span className="text-md">{frontend.title}</span>
+                                <div className="grid grid-cols-2 gap-2">
+                                    {frontend.lang.map((lang,index)=>(
+                                        <div key={index} className="flex items-center text-xs border border-gray-700 rounded-md p-2">{lang}</div>
+                                    ))}
+                                </div>
+                            </div>
+                            
 
+                        ))}
+                         {Backend.map((backend)=>(
+                            <div className="flex flex-col items-center gap-3 border-x border-gray-700 text-sm p-2 ">
+                                <span className="text-md">{backend.title}</span>
+                                <div className="grid grid-cols-2 space-evenly gap-2">
+                                    {backend.lang.map((lang,index)=>(
+                                        <div key={index} className=" flex justify-center text-xs border border-gray-700 rounded-md p-2">{lang}</div>
+                                    ))}
+                                </div>
+                            </div>
+                            
+                        ))}
 
-                    </div>
+                         {Database.map((data)=>(
+                            <div className="flex flex-col items-center gap-3 border-r border-gray-700 text-sm text-green-30 p-2 ">
+                                <span className="text-md">{data.title}</span>
+                                <div className="grid grid-cols-2 gap-2">
+                                    {data.lang.map((lang,index)=>(
+                                        <div key={index} className="flex justify-center text-xs border border-gray-700 rounded-md p-2">{lang}</div>
+                                    ))}
+                                </div>
+                            </div>
+                            
+                        ))}
+
+                        {Tools.map((tool)=>(
+                            <div className="flex flex-col items-center gap-3 text-sm p-2 ">
+                                <span className="text-md">{tool.title}</span>
+                                <div className="grid grid-cols-2 gap-2">
+                                    {tool.lang.map((lang,index)=>(
+                                        <div key={index} className="text-xs border border-gray-700 rounded-md p-2">{lang}</div>
+                                    ))}
+                                </div>
+                            </div>
+                            
+                        ))}
+                       </div>
+                </section>
+                
+                <section className="flex flex-col items-center  gap-2 space-y-3 mt-10">                   
+                        <span className="text-[#ff6a00]">Contact</span>
+                        <span className="text-3xl font-bold">Get In Touch</span>
+                        <p className="text-sm ">Feel free to reach out if you have any questions or just want to connect!</p>
+                        <div className="flex flex-row gap-4 mt-5 bg-[#1f2432]  p-4 rounded-full border border-gray-600">
+                            <a href="mailto:your-tyronemrenje@gmail.com" className=" hover:underline">
+                                <MdOutlineEmail className="h-7 w-7"/>
+                            </a>
+                            <a href="https://www.linkedin.com/in/tyrone-mrenje" className="hover:underline">
+                                <FaLinkedin className="h-7 w-7"/>
+                            </a>
+                            <a href=" https://github.com/TyroneMrenje" className="hover:underline">
+                                <FaGithub className="h-7 w-7"/>
+                            </a>
+                            <a href="https://letterboxd.com/mrenje/" className=" hover:underline">
+                                <FaLetterboxd className="h-7 w-7"/>
+                            </a>
+                           
+
+                        </div>
+                  
 
                 </section>
 

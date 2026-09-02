@@ -34,4 +34,34 @@ export const Projects = [
         ]
     },
 
+];
+
+export const Frontend= [
+    {
+        title: 'Frontend',
+        lang: ['Javascript','React', 'Vue', 'Next Js', 'Tailwind CSS']
+    }
+];
+
+export const Backend= [
+    {
+        title: 'Backend',
+        lang: ['Laravel', 'Node Js', 'Express', 'Python', 'Go', 'PHP']
+    }
+];
+
+export const Database= [
+    {
+        title: 'Data & Cloud',
+        lang: ['PostgreSQL', 'MySQL', 'Redis', 'MongoDB','Docker']
+    }
+];
+
+export const Tools= [
+    {
+        title:'Tools',
+        lang: ['Git/Github', 'Github Actions', 'Postman', 'Vercel', 'Render']
+    }
 ]
+
+
