@@ -14,7 +14,7 @@ export const Projects = [
         description: 'A web application for managing spice inventory, tracking sales, and generating reports. Implemented user authentication and role-based access control for secure data management.',
         type: 'E-Commerce Store',
         languages: [
-           'React', 'Laravel', 'PostgreSQL','Redis', 'Whatsapp API'
+           'React', 'Laravel', 'PostgreSQL', 'Whatsapp API'
         ]
     },
     {
@@ -22,7 +22,7 @@ export const Projects = [
         description: 'A real-time sports streaming platform that allows users to get match updates, live scores, and stream games. Implemented WebSocket technology for real-time data updates and notifications.',
         type: 'Sports Streaming Platform',
         languages: [
-            'Vue', 'Node Js', 'Express','Redis', 'WebSockets'
+            'Vue', 'Node Js', 'Express','Redis'
         ]
     },
      {
