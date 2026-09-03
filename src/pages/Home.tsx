@@ -12,7 +12,7 @@ export default function Home() {
     return(
         <div className="box-border overflow-hidden scroll-smooth bg-[#0b1c2d]">
             <Navbar />
-            <main className="flex relative flex-col px-5 md:px-30">
+            <main className="flex relative flex-col px-7 md:px-10 lg:px-20 ">
                 <motion.section 
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -56,8 +56,8 @@ export default function Home() {
                             <span className="text-3xl font-bold">All About The Developer</span>
                             <p className="text-sm">Code, infrastructure, networks. One engineer tying it together.</p>
                     </div>
-                <div className="flex md:flex-row flex-col items-center justify-between gap-3 mt-10">                 
-                    <div className="flex flex-col items-center border border-gray-600 p-3 rounded-sm gap-2 md:w-[20%] space-y-4 h-70">
+                <div className="flex lg:flex-row flex-col items-center justify-between gap-3 mt-10">                 
+                    <div className="flex flex-col items-center border border-gray-600 p-3 rounded-sm gap-2 lg:w-[20%] space-y-4 h-70">
                         <div className="rounded-full bg-[#ff6a00] p-2 w-15 h-15 flex items-center justify-center">
                            <span className="text-md">TM</span>
                         </div>
@@ -81,7 +81,7 @@ export default function Home() {
                         </div>
 
                     </div>
-                    <div className="flex flex-col gap-4 p-2 md:w-[75%]">
+                    <div className="flex flex-col gap-4 p-2 lg:w-[75%]">
                         <p className="tracking-wide text-md text-pretty">I'm a full-time software developer with a strong backend foundation in Laravel and PostgreSQL, and I round that out with full-stack work in React, TypeScript, and Inertia.js. My approach is foundation-first — I get the schema and backend logic solid before touching the UI, because I'd rather build on something sturdy than patch things together later.
                         </p>
                        
@@ -136,7 +136,7 @@ export default function Home() {
                                     </button>            
                                 </div>
                                 <p className="text-xs text-green-300">[{project.type}]</p>
-                                <p className="w-[90%] md:w-[50%] text-pretty text-md ">{project.description}</p>
+                                <p className="w-[90%] md:w-[50%] text-pretty text-md leading-relaxed">{project.description}</p>
                                 <div className="flex flex-wrap gap-2 md:mb-4">
                                     {project.languages.map((language,index)=> (
                                         <div key={index} className="text-xs border border-gray-700 rounded-md p-2">{language}</div>
@@ -159,13 +159,13 @@ export default function Home() {
                         <span className="text-3xl font-bold">Skills that pay the Bills</span>
                         <p className="text-sm">Skills and languages I've picked up and used along the way</p>
                     </div>                 
-                       <div className="grid grid-rows-4 md:grid-cols-4 justify-center gap-2 bg-[#1f2432] border border-gray-600  mt-10 p-5 rounded-md">
+                       <div className="  grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 gap-4 bg-[#1f2432] border border-gray-600  mt-10 p-5 rounded-md">
                          {Frontend.map((frontend)=>(
-                            <div className="flex flex-col items-center gap-4 text-sm p-2">
+                            <div className="flex flex-col items-center gap-4 text-sm p-4 lg:border-r border-gray-500">
                                 <span className="text-lg text-green-300">{frontend.title}</span>
                                 <div className="grid grid-cols-2 gap-3">
                                     {frontend.lang.map((lang,index)=>(
-                                        <div key={index} className="flex items-center text-sm border border-gray-600 rounded-md p-2">{lang}</div>
+                                        <div key={index} className="text-xs border border-gray-600 rounded-full p-2">{lang}</div>
                                     ))}
                                 </div>
                             </div>
@@ -173,11 +173,11 @@ export default function Home() {
 
                         ))}
                          {Backend.map((backend)=>(
-                            <div className="flex flex-col items-center gap-3 md:border-x border-y border-gray-700 text-sm p-2 ">
+                            <div className="flex flex-col items-center gap-3  border-y md:border-none lg:border-x border-gray-500 text-sm p-2 ">
                                 <span className="text-lg text-green-300">{backend.title}</span>
-                                <div className="grid grid-cols-3 space-evenly gap-4">
+                                <div className="grid grid-cols-3  gap-4">
                                     {backend.lang.map((lang,index)=>(
-                                        <div key={index} className=" flex justify-center text-sm border border-gray-600 rounded-md p-2">{lang}</div>
+                                        <div key={index} className="flex flex-col items-center text-xs border border-gray-600 rounded-full p-2">{lang}</div>
                                     ))}
                                 </div>
                             </div>
@@ -185,11 +185,11 @@ export default function Home() {
                         ))}
 
                          {Database.map((data)=>(
-                            <div className="flex flex-col items-center gap-3 md:border-r border-b border-gray-700 text-sm text-green-30 p-2 ">
+                            <div className="flex flex-col items-center gap-3  lg:border-x border-gray-500 text-sm p-4">
                                 <span className="text-lg text-green-300">{data.title}</span>
                                 <div className="grid grid-cols-2 space-evenly gap-4">
                                     {data.lang.map((lang,index)=>(
-                                        <div key={index} className="flex justify-center text-sm border border-gray-600 rounded-md p-2">{lang}</div>
+                                        <div key={index} className="flex flex-col items-center text-xs border border-gray-600 rounded-full p-2">{lang}</div>
                                     ))}
                                 </div>
                             </div>
@@ -201,7 +201,7 @@ export default function Home() {
                                 <span className="text-lg text-green-300">{tool.title}</span>
                                 <div className="grid grid-cols-2 gap-4">
                                     {tool.lang.map((lang,index)=>(
-                                        <div key={index} className="text-sm border border-gray-600 rounded-md p-2">{lang}</div>
+                                        <div key={index} className="flex flex-col items-center text-xs border border-gray-600 rounded-full p-2">{lang}</div>
                                     ))}
                                 </div>
                             </div>
@@ -219,7 +219,7 @@ export default function Home() {
                 >                   
                        <span className="text-[#ff6a00]">Contact</span>
                         <span className="text-3xl font-bold">Get In Touch</span>
-                        <p className="md:text-lg text-md text-pretty md:w-[60%]">Feel free to reach out if you have any questions.Open to  Full Stack, and Software Engineering roles — remote or on-site. The fastest way to reach me is email. I'm also on LetterBoxd if you want to DM or talk about Gandalf</p>
+                        <p className="md:text-lg text-md text-pretty lg:w-[60%]">Feel free to reach out if you have any questions.Open to  Full Stack, and Software Engineering roles — remote or on-site. The fastest way to reach me is email. I'm also on LetterBoxd if you want to DM or talk about Gandalf</p>
                         <div className="flex flex-row gap-4 mt-5 bg-[#1f2432]  p-5 rounded-full border border-gray-600">
                             <a href="mailto:your-tyronemrenje@gmail.com" className=" hover:underline">
                                 <MdOutlineEmail className="h-7 w-7"/>
