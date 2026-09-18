@@ -10,7 +10,7 @@ export default function Home() {
     const year = new Date().getFullYear();
 
     return(
-        <div className="box-border overflow-hidden scroll-smooth bg-[#0b1c2d]">
+        <div className="box-border overflow-hidden scroll-smooth bg-[#0b1c2d] brightness-90">
             <Navbar />
             <main className="flex relative flex-col px-7 md:px-10 lg:px-20 ">
                 <motion.section 
@@ -21,7 +21,7 @@ export default function Home() {
                   className="flex flex-col justify-center bg-[#1f2432] scroll mt-10 p-8 rounded-lg gap-4 md:gap-2 border border-gray-600"
                 >
                     <div className="flex flex-row items-center md:justify-center gap-2 border border-gray-800 bg-teal-950 p-1 w-50  rounded-md">
-                        <span className=" relative  h-[5px] w-[5px] animate-ping rounded-full bg-green-300 opacity-80"></span>
+                        <span className=" relative h-[5px] w-[5px] animate-ping rounded-full bg-green-300 opacity-80"></span>
                         <span className="text-xs md:text-sm font-thin text-green-300"> AVAILABLE FOR WORK</span>
                     </div>
                     <div className="flex flex-row justify-between gap-4">
@@ -32,7 +32,7 @@ export default function Home() {
                         <h1 className=" text-3xl md:text-6xl text-white">TYRONE MRENJE</h1>
                         <h1 className="text-3xl md:text-6xl text-[#ff6a00]">Full Stack Developer</h1>
                         <span className="text-xs font-normal">Frontend(React || Vue) . Backend(Laravel || Python || Go) . ML(LangChain)</span>
-                        <p className="text-sm md:w-[70%] tracking-wide">I work across backend development and networking, turning business requirements into reliable, scalable systems that can handle real users.</p>
+                        <p className="text-sm md:text-md md:w-[70%] tracking-wide">I work across backend development and networking, turning business requirements into reliable, scalable systems that can handle real users.</p>
                         <div className="flex flex-row gap-4 mt-8">
                             <a href="#work">
                                  <button className="border border-gray-500 p-2 rounded-sm text-xs">Projects</button>
@@ -59,7 +59,7 @@ export default function Home() {
                 <div className="flex lg:flex-row flex-col items-center justify-between gap-3 mt-10">                 
                     <div className="flex flex-col items-center border border-gray-600 p-3 rounded-sm gap-2 lg:w-[20%] space-y-4 h-70">
                         <div className="rounded-full bg-[#ff6a00] p-2 w-15 h-15 flex items-center justify-center">
-                           <span className="text-md">TM</span>
+                           <span>TM</span>
                         </div>
                         <div className="flex flex-row gap-2 text-xs">
                             <span>Experience</span>
@@ -82,32 +82,34 @@ export default function Home() {
 
                     </div>
                     <div className="flex flex-col gap-4 p-2 lg:w-[75%]">
-                        <p className="tracking-wide text-sm md:text-md text-pretty">I'm a full-time software developer with a strong backend foundation in Laravel and PostgreSQL, and I round that out with full-stack work in React, TypeScript, and Inertia.js. My approach is foundation-first — I get the schema and backend logic solid before touching the UI, because I'd rather build on something sturdy than patch things together later.
+                        <p className="tracking-wide text-xs md:text-sm text-pretty">I'm a full-time software developer with a strong backend foundation in Laravel and PostgreSQL, and I round that out with full-stack work in React, TypeScript, and Inertia.js. My approach is foundation-first — I get the schema and backend logic solid before touching the UI, because I'd rather build on something sturdy than patch things together later.
                         </p>
                        
-                        <div className="flex flex-row items-center justify-between border-t border-gray-700 gap-2 p-2  mt-5">
-                            <span className="text-sm">2026 - Present</span>
+                        <div className="flex flex-row items-center justify-between border-t border-gray-700 gap-2 p-2  mt-5 text-xs md:text-base">
+                            <span>2026 - Present</span>
                             <div className="flex flex-col gap-2">
-                                <span className="text-sm">Software Engineer</span>
-                                <span className="text-sm">Fiverr</span>                           
+                                <span>Software Engineer</span>
+                                <span>Fiverr</span>                           
                             </div>
-                            <span className="text-sm">Freelance</span>
+                            <span>Freelance</span>
                         </div>    
-                        <div className="flex flex-row items-center justify-between border-t border-gray-700 gap-2 p-2">
-                            <span className="text-sm">Nov 2025 - Jan 2026</span>
+
+                        <div className="flex flex-row items-center justify-between border-t border-gray-700 gap-2 p-2 text-xs md:text-base">
+                            <span>Nov 2025 - Jan 2026</span>
                             <div className="flex flex-col gap-2">
-                                <span className="text-sm">Software Engineer</span>
-                                <span className="text-sm">Forage</span>
+                                <span>Software Engineer</span>
+                                <span>Forage</span>
                             </div>
-                            <span className="text-sm">Apprenticeship</span>
+                            <span>Apprentice</span>
                         </div> 
-                         <div className="flex flex-row items-center justify-between border-t border-gray-700 gap-2 p-2">
-                            <span className="text-sm">May 2024 - Aug 2024</span>
+
+                         <div className="flex flex-row items-center justify-between border-t border-gray-700 gap-2 p-2 text-xs md:text-base">
+                            <span>May 2024 - Aug 2024</span>
                             <div className="flex flex-col gap-2">
-                                <span className="text-sm">IT Intern</span>
-                                <span className="text-sm">Swahilipot Hub Foundation</span>
+                                <span>IT Intern</span>
+                                <span>Swahilipot Hub Foundation</span>
                             </div>
-                            <span className="text-sm">Internship</span>
+                            <span>Intern</span>
                         </div>              
                     </div>
                 </div>
@@ -118,7 +120,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                 className="flex flex-col mt-20 ">
+                 className="flex flex-col mt-10 ">
                     <div className="flex flex-col gap-2 md:space-y-3">
                         <span className="text-[#ff6a00]">Work</span>
                         <span className="text-3xl font-bold">Selected Systems.</span>
@@ -128,7 +130,7 @@ export default function Home() {
                 <div className="grid grid-rows-4 md:gap-2 mt-5">               
                     { Projects.map((project, index) => (
                 
-                            <div key={index} className="flex flex-col border-t border-gray-700 gap-4 ">
+                            <div key={index} className="flex flex-col border-t border-gray-700 gap-4 brightness-100 transition delay-100 duration-300  ease-in-out hover:cursor-pointer hover:translate-x-1 hover:-translate-y-1  hover:backdrop-brightness-130">
                                 <div className="flex flex-row justify-between mt-5">
                                     <h2 className="text-2xl text-[#ff6a00] font-bold">{project.title}</h2>
                                      <button className="p-2">
