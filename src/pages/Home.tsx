@@ -31,8 +31,8 @@ export default function Home() {
                     <div className="flex flex-col space-y-4">
                         <h1 className=" text-3xl md:text-6xl text-white">TYRONE MRENJE</h1>
                         <h1 className="text-3xl md:text-6xl text-[#ff6a00]">Full Stack Developer</h1>
-                        <span className="text-xs">Frontend(React || Vue) . Backend(Laravel || Python || Go) . ML(LangChain)</span>
-                        <p className="text-md md:text-sm md:w-[70%] tracking-wide">I work across backend development and networking, turning business requirements into reliable, scalable systems that can handle real users.</p>
+                        <span className="text-xs font-normal">Frontend(React || Vue) . Backend(Laravel || Python || Go) . ML(LangChain)</span>
+                        <p className="text-sm md:w-[70%] tracking-wide">I work across backend development and networking, turning business requirements into reliable, scalable systems that can handle real users.</p>
                         <div className="flex flex-row gap-4 mt-8">
                             <a href="#work">
                                  <button className="border border-gray-500 p-2 rounded-sm text-xs">Projects</button>
@@ -82,7 +82,7 @@ export default function Home() {
 
                     </div>
                     <div className="flex flex-col gap-4 p-2 lg:w-[75%]">
-                        <p className="tracking-wide text-md text-pretty">I'm a full-time software developer with a strong backend foundation in Laravel and PostgreSQL, and I round that out with full-stack work in React, TypeScript, and Inertia.js. My approach is foundation-first — I get the schema and backend logic solid before touching the UI, because I'd rather build on something sturdy than patch things together later.
+                        <p className="tracking-wide text-sm md:text-md text-pretty">I'm a full-time software developer with a strong backend foundation in Laravel and PostgreSQL, and I round that out with full-stack work in React, TypeScript, and Inertia.js. My approach is foundation-first — I get the schema and backend logic solid before touching the UI, because I'd rather build on something sturdy than patch things together later.
                         </p>
                        
                         <div className="flex flex-row items-center justify-between border-t border-gray-700 gap-2 p-2  mt-5">
@@ -136,7 +136,7 @@ export default function Home() {
                                     </button>            
                                 </div>
                                 <p className="text-xs text-green-300">[{project.type}]</p>
-                                <p className="w-[90%] md:w-[50%] text-pretty text-md leading-relaxed">{project.description}</p>
+                                <p className="md:w-[50%] text-pretty text-sm leading-relaxed">{project.description}</p>
                                 <div className="flex flex-wrap gap-2 md:mb-4">
                                     {project.languages.map((language,index)=> (
                                         <div key={index} className="text-xs border border-gray-700 rounded-md p-2">{language}</div>
@@ -165,7 +165,7 @@ export default function Home() {
                                 <span className="text-lg text-green-300">{frontend.title}</span>
                                 <div className="grid grid-cols-2 gap-3">
                                     {frontend.lang.map((lang,index)=>(
-                                        <div key={index} className="text-xs border border-gray-600 rounded-full p-2">{lang}</div>
+                                        <div key={index} className="flex flex-col items-center text-xs border border-gray-600 rounded-full p-2">{lang}</div>
                                     ))}
                                 </div>
                             </div>
@@ -222,16 +222,16 @@ export default function Home() {
                         <p className="md:text-lg text-md text-pretty lg:w-[60%]">Feel free to reach out if you have any questions.Open to  Full Stack, and Software Engineering roles — remote or on-site. The fastest way to reach me is email. I'm also on LetterBoxd if you want to DM or talk about Gandalf</p>
                         <div className="flex flex-row gap-4 mt-5 bg-[#1f2432]  p-5 rounded-full border border-gray-600">
                             <a href="mailto:your-tyronemrenje@gmail.com" className=" hover:underline">
-                                <MdOutlineEmail className="h-7 w-7"/>
+                                <MdOutlineEmail className="h-7 w-7 hover:text-[#ff6a00]"/>
                             </a>
                             <a href="https://www.linkedin.com/in/tyrone-mrenje" className="hover:underline">
-                                <FaLinkedin className="h-7 w-7"/>
+                                <FaLinkedin className="h-7 w-7 hover:text-[#ff6a00]"/>
                             </a>
                             <a href=" https://github.com/TyroneMrenje" className="hover:underline">
-                                <FaGithub className="h-7 w-7"/>
+                                <FaGithub className="h-7 w-7 hover:text-[#ff6a00]"/>
                             </a>
                             <a href="https://letterboxd.com/mrenje/" className=" hover:underline">
-                                <FaLetterboxd className="h-7 w-7"/>
+                                <FaLetterboxd className="h-7 w-7 hover:text-[#ff6a00]"/>
                             </a>
                             <a>
                                 <p className="text-pretty tracking-wider text-sm ">
