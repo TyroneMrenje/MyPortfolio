@@ -10,7 +10,7 @@ export default function Home() {
     const year = new Date().getFullYear();
 
     return(
-        <div className="box-border overflow-hidden scroll-smooth bg-[#0b1c2d] brightness-90">
+        <div className="box-border overflow-hidden scroll-smooth bg-[#0b1c2d]">
             <Navbar />
             <main className="flex relative flex-col px-7 md:px-10 lg:px-20 ">
                 <motion.section 
